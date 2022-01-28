@@ -187,8 +187,8 @@ title .text {
 }
 
 .btn-trans:hover {
-    background: red;
-    border-color: red;
+    background: #5cea7d;
+    border-color: #5cea7d;
 }
 
 .btn-white {
@@ -273,6 +273,154 @@ title .text {
     margin-right: 1.4rem;
 }
 
+.team .row {
+    margin-top: 2rem;
+}
+
+.team-item {
+    margin: 2rem 0;
+}
+
+.team img {
+    position: relative;
+}
+
+.team-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background: whitesmoke;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.team-icons a {
+    color: black;
+    width: 50px;
+    height: 50px;
+    transition: var(--transition);
+}
+
+.team-icons a:hover {
+    background: #5cea7d;
+    color: white;
+}
+
+.team-img:hover .team-icons {
+    opacity: 1;
+}
+
+.team-info {
+    text-align: center;
+    padding: 1.5rem;
+    line-height: 1;
+}
+
+.team-info h3 {
+    font-size: 1.4rem;
+    color: #013b70;
+}
+
+.team-info span {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.contact .row {
+    margin-top: 2rem;
+}
+
+.contact .row > div {
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+.contact .row > div h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.contact-left form input,
+.contact-left form textarea {
+    width: 100%;
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+    padding: 0.8rem 0.6rem;
+    border: none;
+    border-bottom: 1.5px solid #f0f0f0;
+    outline: 0;
+}
+
+.contact-left form input::placeholder,
+.contact-left form textarea::placeholder {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.contact-left form input:focus,
+.contact-left form textarea:focus {
+    border-color: #013b70;
+}
+
+.submit-btn {
+    margin: 1rem 0;
+    border: none;
+    font-size: 1.3rem;
+    color: #FFF;
+    background: #5cea7d;
+    opacity: 0.9;
+    padding: 0.8rem 3.4rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background: #013b70;
+    color: #5cea7d;
+}
+
+.contact-right div {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    background: #013b70;
+    color: #fff;
+    padding: 2rem 0;
+    height: 50vh;
+}
+
+.footer .text {
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+
+.footer-links a {
+    color: #fff;
+    opacity: 0.8;
+    width: 60px;
+    height: 60px;
+    margin: 0 0.4rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    background: #5cea7d;
+    color: #013b70;
+}
 
 @media screen and (min-width: 768px) {
     .about .row {
@@ -283,13 +431,17 @@ title .text {
     .about-item {
         margin: 0;
     }
-
-    /* .navbar-brand img {
-        width: 50px;
-        padding-right: 10px;
-        display: inline;
-    } */
-
+    .team-item {
+        margin: 0;
+    }
+    .contact .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    .contact-right > div:first-child {
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -373,5 +525,13 @@ title .text {
         width: 50px;
         padding-right: 10px;
         display: inline;
+    }
+    .contact .row {
+        column-gap: 4rem;
+    }
+
+    .contact-right {
+        padding-left: 4rem!important;
+
     }
 }
