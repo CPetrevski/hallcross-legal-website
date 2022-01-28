@@ -110,6 +110,10 @@ title .text {
     color: white;
 }
 
+.navbar-brand img {
+    display: none;
+}
+
 .navbar-brand:hover {
     color: #5cea7d;
     transition: var(--transition);
@@ -279,6 +283,13 @@ title .text {
     .about-item {
         margin: 0;
     }
+
+    /* .navbar-brand img {
+        width: 50px;
+        padding-right: 10px;
+        display: inline;
+    } */
+
 }
 
 @media screen and (min-width: 992px){
@@ -295,6 +306,7 @@ title .text {
         color: white;
         font-size: 2rem;
     }
+
     .navbar-toggler {
         display: none;
     }
@@ -356,5 +368,10 @@ title .text {
     }
     .about .row {
         grid-template-columns: repeat(3, 1fr);
+    }
+        .navbar-brand img {
+        width: 50px;
+        padding-right: 10px;
+        display: inline;
     }
 }
