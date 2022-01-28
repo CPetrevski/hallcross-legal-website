@@ -3,7 +3,7 @@
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Adam', sans-serif;                                           
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -28,11 +28,11 @@ a {
 }
 
 li {
-    list-style: none;
+    list-style-type: none;
 }
 button {
     cursor: pointer;
-    outline:0;
+    outline: 0;
     background: transparent;
 }
 
@@ -55,6 +55,25 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+section {
+    padding: 6.5rem 0;
+}
+
+.title {
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 2.2rem;
+    color: #013b70;
+}
+
+title .text {
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
 .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../images/city.png);
     min-height: 100vh;
@@ -63,16 +82,17 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
+    display: flex;
     flex-direction: column;
     justify-content: stretch;
 }
 
-.navbar {
+.navbar {                                              
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: gray;
+    background-color: #013b70;
     z-index: 999;
 }
 
@@ -85,20 +105,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand {
+    font-family: 'Adam', sans-serif;  
     font-weight: 500;
     color: white;
 }
 
+.navbar-brand:hover {
+    color: #5cea7d;
+    transition: var(--transition);
+}
+
 .navbar-toggler {
     border: none;
-    color: red;
+    color: white;
 }
 
 .navbar-nav {
+    font-family: 'Adam', sans-serif;  
     margin: 0.2rem 0 0.6rem 0;
 }
 
 .nav-item {
+    font-family: 'Adam', sans-serif;  
     padding: 0.6rem 0;
 }
 
@@ -112,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link:hover {
-    color: red!important;
+    color: #5cea7d!important;
 }
 
 .navbar-collapse {
@@ -131,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-div p {
-    color: white;
+    color: whitesmoke;
     font-size: 1.05rem;
     letter-spacing: 3px;    
 }
@@ -141,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-btns button {
-    color: gray;
+    /* color: gray; */
     border: 3.5px solid #fff;
     border-radius: 2rem;
     padding: 0.8rem 2rem;
@@ -170,12 +198,95 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
+.about {
+    background: whitesmoke;
+}
+
+.about-item {
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    -moz-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    margin: 2rem 0;
+    padding: 3.5rem 1.5rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.about-item:hover {
+    -webkit-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    -moz-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    transform: translateY(-5px);
+}
+
+.about-item h2 {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.line {
+    width: 45px;
+    margin: 1.2rem auto;
+    background: #5cea7d;
+    height: 2.5px;
+}
+
+.practice .title {
+    text-align: left;
+}
+
+.practice-left img {
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.practice-right {
+    margin-top: 4rem;
+}
+
+.practice-item {
+    margin: 1.4rem;
+    display: flex;
+}
+
+.practice-item div h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: .85;
+}
+
+.practice-item span {
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #5cea7d;
+    align-self: flex-start;
+    padding: 0.4rem 0.7rem;
+    border-radius: 2px;
+    margin-right: 1.4rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .about .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .about-item {
+        margin: 0;
+    }
+}
+
 @media screen and (min-width: 992px){
     .navbar {
         background: transparent;
         margin-top: 1.4rem;
     }
-    .narbar .container {
+    .navbar .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -198,11 +309,52 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: 1.8rem;
     }
     .nav-link {
-        color:red
+        color:whitesmoke
         ;
     }
     .hero-div h1 {
         font-size: 3.8rem;
 
+    }
+    .btn-trans {
+        display: inline-block;
+        margin-right: 0.8rem;
+    }
+
+    .cgn-navbar {
+        -webkit-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+        -moz-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+        -box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+        margin-top: 0;
+        background: #fff;
+    }
+    .cgn-navbar .navbar-brand {
+        color: darkgray;
+    }
+
+    .cgn-navbar .nav-link {
+        color: #013b70;
+    }
+
+    .practice .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2rem;
+    }
+
+    .practice-right {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-div h1 {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about .row {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
