@@ -440,6 +440,15 @@ title .text {
     color: #013b70;
 }
 
+@media screen and (max-width: 768px) {
+    .team-container {
+        padding: 20px;
+        display: inline;
+        width: 50%;
+        height: 50%;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .about .row {
         display: grid;
@@ -460,6 +469,7 @@ title .text {
     .contact-right > div:first-child {
         margin-top: 0;
     }
+
 }
 
 @media screen and (min-width: 992px){
@@ -528,6 +538,8 @@ title .text {
     .practice-right {
         margin-top: 0;
     }
+    
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -552,4 +564,5 @@ title .text {
         padding-left: 4rem!important;
 
     }
+    
 }
