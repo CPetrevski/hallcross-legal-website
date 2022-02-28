@@ -280,6 +280,11 @@ title .text {
     margin-right: 1.4rem;
 }
 
+.team-container {
+    padding: 20px;
+    display: flex;
+}
+
 .team .row {
     margin-top: 2rem;
 }
@@ -290,10 +295,18 @@ title .text {
 
 .team img {
     position: relative;
-    width: 50%;
-    height: 50%;
-    top: 25%;
-    left: 25%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+    /* top: 25%; */
+    /* left: 25%; */
+}
+
+.team-info {
+    margin-top: 20px;
+    text-align: center;
+    padding: 1.5rem;
+    line-height: 1;
 }
 
 .team-icons {
@@ -321,12 +334,6 @@ title .text {
 
 .team-img:hover .team-icons {
     opacity: 1;
-}
-
-.team-info {
-    text-align: center;
-    padding: 1.5rem;
-    line-height: 1;
 }
 
 .team-info h3 {
