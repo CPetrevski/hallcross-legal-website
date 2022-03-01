@@ -93,7 +93,7 @@ title .text {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #013b70;
+    background-color: #747574;
     z-index: 999;
 }
 
@@ -112,7 +112,9 @@ title .text {
 }
 
 .navbar-brand img {
-    display: none;
+    /* display: none; */
+    width: 80px;
+    padding-top: 10px;
 }
 
 .navbar-brand:hover {
