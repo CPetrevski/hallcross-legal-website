@@ -3,7 +3,7 @@
 }
 
 * {
-    font-family: 'Adam', sans-serif;                                           
+    font-family: 'Adam', 'Roboto', sans-serif;                                           
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -99,7 +99,7 @@ title .text {
 
 .brand-and-toggler {
     font-size: 1.65rem;
-    padding: 0.8rem 0;
+    /* padding: 0.8rem 0; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -552,9 +552,11 @@ title .text {
         grid-template-columns: repeat(3, 1fr);
     }
         .navbar-brand img {
-        width: 50px;
+        width: 250px;
         padding-right: 10px;
         display: inline;
+        margin: 0;
+
     }
     .contact .row {
         column-gap: 4rem;
